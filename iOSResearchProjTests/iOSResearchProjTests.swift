@@ -34,5 +34,16 @@ final class iOSResearchProjTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testSwapTwoValues() throws {
+        self.measure {
+            let foo = GenericsBasicFuncs()
+            var a = 4
+            var b = 5
+            foo.swapTwoValues(a: &a, b: &b)
+            XCTAssertEqual(a, 5)
+            XCTAssertEqual(b, 4)
+        }
+    }
 
 }

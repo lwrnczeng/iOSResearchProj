@@ -1,0 +1,40 @@
+
+We are building an Event-Driven Account Transaction Engine in modern Swift.
+
+The Scenario
+You are tasked with building a reactive, thread-safe transaction engine that streams real-time financial ledger updates to the UI while executing heavy background payload decryption and local database syncing.
+
+The legacy team left behind a broken implementation filled with Swift 6 Strict Concurrency violations, data races, blocking calls on @MainActor, and potential Combine memory leaks.s
+
+
+The Flawed Code Base - refer to the .swift file.
+Examine the implementation. Identify the architecture and concurrency flaws, then refactor it to meet production-level, Swift 5.10 / Swift 6 strict concurrency standards.
+
+
+Technical Constraints & Refactoring Requirements
+Your refactored implementation must adhere to the following strict constraints:
+
+1. Thread Isolation & Actor Bounds:
+
+    Move the disk caching (LocalLedgerDatabase) completely off the main thread using an actor or dedicated background isolation context.
+
+    Ensure CPU-bound decryption (decryptPayload) is executed off the @MainActor without stalling UI rendering or frame rates.
+
+2. Combine & Concurrency Interop:
+
+    Convert or bridge the incoming Combine reactive stream to leverage Swift Concurrency (AsyncSequence / AsyncStream or structured Task boundaries) safely.
+
+    Eliminate all risk of memory leaks (retain cycles) inside Combine or Task operators.
+
+3. Data-Race Safety (Swift 6):
+
+    Ensure all models and types crossing thread boundaries conform strictly to Sendable.
+
+    Enforce strict isolation guarantees so that UI state updates are strictly executed on @MainActor.
+
+Your Task
+    1. Point out the top 3-4 architectural and concurrency flaws in the legacy code.
+
+    2. Provide your complete, refactored implementation utilizing modern Swift primitives (actor, @MainActor, Sendable, Task, AsyncSequence/Combine operators).
+
+    Take your time to structure the code clean and module-ready.
