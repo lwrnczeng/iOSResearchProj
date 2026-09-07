@@ -1,0 +1,23 @@
+//
+//  debug.xcconfig
+//  iOSResearchProj
+//
+//  Created by Lawrence Zeng on 2026-08-31.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+// Warn if any function takes more than 100ms to compile
+OTHER_SWIFT_FLAGS = $(inherited) -Xfrontend -warn-long-function-bodies=100
+
+// Warn if any single expression takes more than 100ms to type-check
+OTHER_SWIFT_FLAGS = $(inherited) -Xfrontend -warn-long-expression-type-checking=100
+
+////Warning: No Swift function compilation times were found.
+////Did you compile your project with the flags -Xfrontend -debug-time-function-bodies?
+//OTHER_SWIFT_FLAGS = $(inherited) -Xfrontend -debug-time-function-bodies
+//
+////Warning: No Swiftc type checks times were found.
+////Did you compile your project with the flags -Xfrontend -debug-time-expression-type-checking?
+//OTHER_SWIFT_FLAGS = $(inherited) -Xfrontend -debug-time-expression-type-checking

@@ -7,5 +7,7 @@
 
 
 class CheckoutCoordinator {
-    
+    func navigateToDiscountView() {
+        
+    }
 }

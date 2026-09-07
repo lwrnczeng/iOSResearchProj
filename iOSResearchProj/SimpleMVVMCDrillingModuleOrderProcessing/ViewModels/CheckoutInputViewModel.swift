@@ -11,18 +11,18 @@ import Combine
 @MainActor
 class CheckoutInputViewModel: ObservableObject {
     @Published var itemName : String
-    @Published var price: Decimal
-    @Published var promoCode: String
+    @Published var priceText: String
+    @Published var quantity: Int = 1
     @Published var checkoutCoordinator: CheckoutCoordinator
     
-    
     init(itemName: String,
-         price: Decimal,
-         promoCode: String,
+         priceText: String,
+         quantity: Int,
          checkoutCoordinator: CheckoutCoordinator) {
         self.itemName = itemName
-        self.price = price
-        self.promoCode = promoCode
+        self.priceText = priceText
+        self.quantity = quantity
         self.checkoutCoordinator = checkoutCoordinator
     }
+    
 }

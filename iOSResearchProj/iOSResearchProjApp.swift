@@ -25,7 +25,7 @@ struct iOSResearchProjApp: App {
 
     var body: some Scene {
         WindowGroup {
-            BankingDashboardView()
+            CheckoutInputView() //BankingDashboardView()
         }
         .modelContainer(sharedModelContainer)
     }
