@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DE3F3A0B306AFE4000A90B92 /* LiveCodingBlueprint in Frameworks */ = {isa = PBXBuildFile; productRef = DE3F3A0A306AFE4000A90B92 /* LiveCodingBlueprint */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DE0A9112301FB6A600C03DE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE3F3A0B306AFE4000A90B92 /* LiveCodingBlueprint in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = iOSResearchProj;
 			packageProductDependencies = (
+				DE3F3A0A306AFE4000A90B92 /* LiveCodingBlueprint */,
 			);
 			productName = iOSResearchProj;
 			productReference = DE0A9102301FB6A500C03DE7 /* iOSResearchProj.app */;
@@ -197,6 +203,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				DEEBADEE3023D64800107714 /* XCRemoteSwiftPackageReference "Swinject" */,
+				DE3F39BC306AFDEC00A90B92 /* XCLocalSwiftPackageReference "MyStandardPackage" */,
+				DE3F3A09306AFE4000A90B92 /* XCLocalSwiftPackageReference "../TechInterViewDrill/LiveCodingBlueprint" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DE0A9103301FB6A500C03DE7 /* Products */;
@@ -579,6 +587,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		DE3F39BC306AFDEC00A90B92 /* XCLocalSwiftPackageReference "MyStandardPackage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = MyStandardPackage;
+		};
+		DE3F3A09306AFE4000A90B92 /* XCLocalSwiftPackageReference "../TechInterViewDrill/LiveCodingBlueprint" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../TechInterViewDrill/LiveCodingBlueprint;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		DEEBADEE3023D64800107714 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -589,6 +608,13 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE3F3A0A306AFE4000A90B92 /* LiveCodingBlueprint */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LiveCodingBlueprint;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE0A90FA301FB6A500C03DE7 /* Project object */;
 }

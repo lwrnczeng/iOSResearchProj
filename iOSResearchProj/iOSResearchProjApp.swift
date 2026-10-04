@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import LiveCodingBlueprint
 
 @main
 struct iOSResearchProjApp: App {
@@ -25,7 +26,7 @@ struct iOSResearchProjApp: App {
 
     var body: some Scene {
         WindowGroup {
-            CheckoutInputView() //BankingDashboardView()
+            ProductListView() //CheckoutInputView() //BankingDashboardView()
         }
         .modelContainer(sharedModelContainer)
     }
